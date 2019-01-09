@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+    background-color: #000;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+/* Navigation */
+nav {
+    font-size: 1.1rem;
+    display: flex; 
+    width: 900px;
+    height: 150px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    width: 120px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+a:hover {
+    color: rgb(201, 201, 201);
+}
+
+#desktop-logo {
+    height: 120px;
+}
+
+#desktop-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Hide small logo on desktop */
+#mobile-logo {
+    display: none;
+}
+
+/* Hide mobile menu icon on desktop */
+.nav-toggle {
+    display: none;
+}
+
+#showcase {
+    background: url('/img/showcase.jpg') no-repeat center/cover;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+/* Media Queries */
+
+/* Large screens */
+@media screen and (max-width: 900px) {
+    .container {
+        max-width: 900px;
+    }
+
+    nav {
+        width: 100%;
+    }
+}
+
+/* Small screens */
+@media screen and (max-width: 767px) {
+    nav {
+        height: auto;
+        flex-direction: column;
+        font-size: 1rem;
+    }
+
+    nav a {
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .nav-items {
+        display: none;
+        z-index: 5;
+    }
+
+    .nav-toggle {
+        color: #fff;
+        display: initial;
+        position: absolute;
+        cursor: pointer;
+        z-index: 10;
+        top: 5%;
+        left: 4%;
+    }
+
+    .nav-toggle-show {
+        display: flex;
+    }
+
+    /* Remove large logo for mobiles */
+    #desktop-logo {
+        display: none;
+    }
+
+    /* Add duplicate small logo for mobiles */
+    #mobile-logo {
+        height: 60px;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #mobile-logo a {
+        height: 50px;
+        width: 50px;
+    }
+
+    #mobile-logo img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
+
