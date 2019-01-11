@@ -10,17 +10,30 @@
 </head>
 <body>
     <div class="container">
+
         <!-- Navigation & Showcase -->
         <div id="mobile-logo"><a href="/"><img src="/img/no-9-cinema.png" alt=""></a></div>
         <div class="nav-toggle"><i class="fas fa-bars fa-lg"></i></div>
         <nav class="nav-items">
             <a href="#">What's On</a>
-            <a href="#">The Venue</a>
+            <a href="#">Venue</a>
             <a href="/" id="desktop-logo"><img src="/img/no-9-cinema.png" alt=""></a>
             <a href="#">News</a>
             <a href="#">Contact</a>
         </nav>
-        <div id="showcase"></div>
+        
+        <!-- Image Carousel -->
+        <div class="container">
+            <div id="showcase-carousel">
+                <div id="showcase-buttons">
+                    <button class="button button-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="button button-right" onclick="plusDivs(+1)">&#10095;</button>
+                </div>
+                <img class="slides" src="/img/central-cinema.jpg" alt="">
+                <img class="slides" src="/img/film-strip.jpg" alt="">
+                <img class="slides" src="/img/silhouette.jpg" alt="">
+            </div>
+        </div>
     </div>
 
     <script src="/main.js"></script>
